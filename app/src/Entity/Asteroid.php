@@ -5,11 +5,13 @@ namespace App\Entity;
 use App\Repository\AsteroidRepository;
 use Doctrine\ORM\Mapping as ORM;
 use DateTimeInterface;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass=AsteroidRepository::class)
+ * @ORM\Table(name="asteroid")
  */
-class Asteroid implements \JsonSerializable
+class Asteroid implements JsonSerializable
 {
     /**
      * @ORM\Id()
