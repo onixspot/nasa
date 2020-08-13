@@ -99,7 +99,7 @@ class NeoController extends AbstractController
             'year'  => $year,
             'month' => $month,
         ] = $this->repository->getBestMonth();
-        $date = new DateTime(sprintf('%s-%s-01', $year, $month));
+        $date = new DateTime(sprintf('%s-%s', $year, $month));
 
         return $this->json(
             [
